@@ -25,9 +25,9 @@ I. Introduction
 
 II. Prerequisites
 
-    The given version is just to suggest you to use this version, but not to prohibit you from using newer version, although we haven’t tested the newer ones and some unknown error may occur.
-    Needed R packages: ggplot2, EMT, etc.
-    The needed in-house scripts (fqNameMapping.pl, fqSeFilter.pl, etc.) are packaged in the source release.
+   The given version is just to suggest you to use this version, but not to prohibit you from using newer version, although we haven’t tested the newer ones and some unknown error may occur.
+   Needed R packages: ggplot2, EMT, etc.
+   The needed in-house scripts (fqNameMapping.pl, fqSeFilter.pl, etc.) are packaged in the source release.
 
 III. Tutorial
 
