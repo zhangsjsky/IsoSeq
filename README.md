@@ -1,11 +1,11 @@
 Table of Contents
 
-    Introduction
-    Prerequisites
-    Tutorial
-    Reference
-    Getting help
-    Frequently asked questions (FAQs)
+    I. Introduction
+    II. Prerequisites
+    III. Tutorial
+    IV. Reference
+    V. Getting help
+    VI. Frequently asked questions (FAQs)
 
 I. Introduction
 
@@ -22,3 +22,38 @@ I. Introduction
     I.	Identify Alternative RNA Processing Events (APE, including SE, IR, A5SS, A3SS, APA) with CCS reads and junctions from RNA-seq (if available).
     J.	APE characterization, like motif of splicing site, classifying APE into annotated or novel events, etc.
     K.	Combination pattern of APE.
+
+II. Prerequisites
+
+    The given version is just to suggest you to use this version, but not to prohibit you from using newer version, although we haven’t tested the newer ones and some unknown error may occur.
+    Needed R packages: ggplot2, EMT, etc.
+    The needed in-house scripts (fqNameMapping.pl, fqSeFilter.pl, etc.) are packaged in the source release.
+
+III. Tutorial
+
+3.1 Setup Environment
+Assume that the pipeline is put at ~/bin/isoSeq.
+
+This pipeline is composed of perl, python, bash and R scripts as well as pre-compiled C binaries, so no need to build/compile them. The only thing needed to do is making them executable:
+
+    cd ~/bin/isoSeq
+    chmod u+x *.{pl,py,sh,R} skyjoin faFilter faCount
+    
+Add the path of the pipeline as the prefix of the environment variable $PATH, so that all scripts can be runed as executable command directly.
+
+    PATH=~/bin/isoSeq:$PATH
+
+After doing this, the correct $PATH may look like:
+
+    echo $PATH
+    ~/bin/isoSeq:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+    
+Test whether the pipeline is accessible:
+
+    isoSeq.sh
+    
+If pipeline hele message is shown, the environment is ready, otherwise if the below error is shown:
+
+    bash: isoSeq.sh: command not found...
+
+check whether the pipeline scripts are executable and their path is in the $PATH variable.
