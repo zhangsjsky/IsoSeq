@@ -59,3 +59,19 @@ If pipeline hele message is shown, the environment is ready, otherwise if the be
     bash: isoSeq.sh: command not found...
 
 check whether the pipeline scripts are executable and their path is in the $PATH variable.
+
+3.2 Prepare Configuration File
+The format and description of the configuration file is explained in the help message of isoSeq.sh. It (e.g. sample.conf) is a text file with many lines, each of which is TSV (tab-separated value) or space-separated values. One line is the complete information for one sample. Columns in one line is:
+
+An example of configuration file:
+
+#SampleName  InputDirectory  Primer     Junction(Optional)
+
+sample1       sample1_data   primer1.fa  junctions.bed
+
+sample2       sample2_data   primer2.fa
+
+
+
+The line prefixed with a ‘#’ isn’t necessary and will be skipped automatically by the pipeline.
+
