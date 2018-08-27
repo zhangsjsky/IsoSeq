@@ -3,9 +3,7 @@ Table of Contents
     I. Introduction
     II. Prerequisites
     III. Tutorial
-    IV. Reference
-    V. Getting help
-    VI. Frequently asked questions (FAQs)
+    IV. Getting help
 
 I. Introduction
 
@@ -77,7 +75,7 @@ sample2       sample2_data   primer2.fa
 
 The line prefixed with a ‘#’ isn’t necessary and will be skipped automatically by the pipeline.
 
-4.3 Prepare Resource Data
+3.3 Prepare Resource Data
 
 Some resource (data) can be specified in env.conf file in the source. Needed resource files include:
 
@@ -98,13 +96,13 @@ These variables can be overwrote by command option of isoSeq.sh, for example:
     isoSeq.sh --genomeSeq /path/to/your/genome/sequence
 will overwrite the “$resource/fna/hg19/all.fa”.
 
-4.4 Start to Run the Pipeline
+3.4 Start to Run the Pipeline
 
 A complete command to run the pipeline may be:
 
     isoSeq.sh --gmapDir gmapDir/hg19 \
-       --gmapDB hg19 \
-       --genomeSeq hg19.fasta \
+        --gmapDB hg19 \
+        --genomeSeq hg19.fasta \
         --gpe hg19.refGene.gpe \
         --gap hg19.gap.bed \
         --twoBit hg19.2bit \
@@ -120,3 +118,7 @@ GMAP DB can be prepared by:
 If the variables in env.conf are specified correctly, you can simply run the analysis as:
 
     isoSeq.sh --thread 10 sample.conf >isoSeq.log 2>isoSeq.err
+
+IV. Getting help
+
+You can send the author (zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
