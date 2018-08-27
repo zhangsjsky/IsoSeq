@@ -61,6 +61,7 @@ If pipeline hele message is shown, the environment is ready, otherwise if the be
 check whether the pipeline scripts are executable and their path is in the $PATH variable.
 
 3.2 Prepare Configuration File
+
 The format and description of the configuration file is explained in the help message of isoSeq.sh. It (e.g. sample.conf) is a text file with many lines, each of which is TSV (tab-separated value) or space-separated values. One line is the complete information for one sample. Columns in one line is:
 
 An example of configuration file:
