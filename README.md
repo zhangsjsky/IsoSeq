@@ -151,4 +151,4 @@ isoSeq.sh --thread 10 sample.conf >isoSeq.log 2>isoSeq.err
 ````
 **IV. Getting help**
 ==
-You can send the author (mailto:zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
+You can send the author [zhangsjsky@foxmail.com](mailto:zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
