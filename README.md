@@ -23,6 +23,19 @@
 
 **II. Prerequisites**
 ==
+|Tool Name|Version|Description|
+|:---|:---|:---|
+SMRT Analysis|v2.3.0|The analysis toolkit for RSII Iso-seq data.
+SMRT Link|v5.1.0|The analysis toolkit for Sequel Iso-seq data.
+R|3.3.2|The R language program.
+Perl|5.24|The Perl language program.
+Python|2.7|The Python language program.
+cDNA-primer|1.1.6|The wrapper of HMMer for get full-length reads.
+HMMer|3.1b2|The tool to identify primer and polyA sequences.
+seqtk|1.2-r94|The toolkit to manipulate fastq/fasta files.
+GMAP|2017-11-15|The mapper for aligning CCS reads onto reference genome
+SAMTools|1.5|The toolkit to manipulate BAM files.
+BEDTools|2-2.26.0|The utilities to manipulate BED files.
    The given version is just to suggest you to use this version, but not to prohibit you from using newer version, although we haven’t tested the newer ones and some unknown error may occur.
    
    Needed R packages: ggplot2, EMT, etc.
