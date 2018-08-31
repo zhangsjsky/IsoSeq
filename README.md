@@ -1,11 +1,11 @@
 **Table of Contents**
 =
-    [I. Introduction](#I)
+    I. Introduction
     II. Prerequisites
     III. Tutorial
     IV. Getting help
 
-**I. Introduction**<span id="I"></span>
+**I. Introduction**
 ==
     This is a bash-based pipeline for analysis of PacBio Iso-Seq generated with RSII or Sequel. Collectively, the pipeline will do:
     
