@@ -1,4 +1,4 @@
-<center>**Table of** Contents</center>
+**Table of Contents**
 
     I. Introduction
     II. Prerequisites
