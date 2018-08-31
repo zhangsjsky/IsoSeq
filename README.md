@@ -80,27 +80,16 @@ The format and description of the configuration file is explained in the help me
 |Column|Description
 |:---|:---
 |SampleName|The sample name.<br>Results of the sample will be put under a directory named as the given SampleName (under --outDir)
-InputDirectory|The input directory of Iso-seq raw data.<br>The directory is composed of cell directories.<br>For Sequel, each cell directory is composed of files like .subreads.bam, .subreadset.xml, etc.<br>For RSII, each cell directory is composed of .h5 files.
-Primer|The primer-pair sequences file in FASTA format.<br>The forward primer must be named as F0, F1, F2, …, etc. Likely the reverse primer must be R0, R1, R2, …, etc. F0 and R0 is a pair, F1 and R1 is a pair, and so on.<br>A example file can be:<br>&gt;F0<br>AAGCAGTGGTATCAACGCAGAGTACATGGGG<br>&gt;R0<br>GTACTCTGCGTTGATACCACTGCTT<br>&gt;F1<br>TCGTCGGGGACAACTTTGTACAAAAAAGTTGGATGGGG<br>&gt;R1<br>CCCAACTTTCTTGTACAAAGTTGTCCCC
-Junction (Optional)|If the corresponding RNA-seq junction information is available for the sample, this information in .bed format (output of RNA-seq mapping, like TopHat) can be provided. If so, the following extra analysis will be done:<br>
-1.	Remove mis-aligned exon guiding by RNA-seq junction<br>
-2.	Fill missing exon guiding by RNA-seq junction<br>
-3.	Make consensus splicing site guiding by RNA-seq junction<br>
-4.	Statistics of PacBio junction supporting by RNA-seq junction<br>
-5.	Identify SE, A5SS and A3SS with the help of RNA-seq junction<br>
-6.	Comparison of SE, A5SS and A3SS identified with PacBio and RNA-seq<br>
-7.	Comparison of PSI of SE, A5SS and A3SS identified with PacBio and RNA-seq<br>
-8.	Independ combination between alternative splicing events and APA<br>
+|InputDirectory|The input directory of Iso-seq raw data.<br>The directory is composed of cell directories.<br>For Sequel, each cell directory is composed of files like .subreads.bam, .subreadset.xml, etc.<br>For RSII, each cell directory is composed of .h5 files.
+|Primer|The primer-pair sequences file in FASTA format.<br>The forward primer must be named as F0, F1, F2, …, etc. Likely the reverse primer must be R0, R1, R2, …, etc. F0 and R0 is a pair, F1 and R1 is a pair, and so on.<br>A example file can be:<br>&gt;F0<br>AAGCAGTGGTATCAACGCAGAGTACATGGGG<br>&gt;R0<br>GTACTCTGCGTTGATACCACTGCTT<br>&gt;F1<br>TCGTCGGGGACAACTTTGTACAAAAAAGTTGGATGGGG<br>&gt;R1<br>CCCAACTTTCTTGTACAAAGTTGTCCCC
+|Junction (Optional)|If the corresponding RNA-seq junction information is available for the sample, this information in .bed format (output of RNA-seq mapping, like TopHat) can be provided. If so, the following extra analysis will be done:<br>1. Remove mis-aligned exon guiding by RNA-seq junction<br>2. Fill missing exon guiding by RNA-seq junction<br>3. Make consensus splicing site guiding by RNA-seq junction<br>4. Statistics of PacBio junction supporting by RNA-seq junction<br>5. Identify SE, A5SS and A3SS with the help of RNA-seq junction<br>6. Comparison of SE, A5SS and A3SS identified with PacBio and RNA-seq<br>7. Comparison of PSI of SE, A5SS and A3SS identified with PacBio and RNA-seq<br>8. Independ combination between alternative splicing events and APA<br>
 
 An example of configuration file:
 
-#SampleName  InputDirectory  Primer     Junction(Optional)
-
-sample1       sample1_data   primer1.fa  junctions.bed
-
-sample2       sample2_data   primer2.fa
-
-
+|#SampleName|InputDirectory|Primer|Junction(Optional)
+|:---|:---
+|sample1|sample1_data|primer1.fa|junctions.bed
+|sample2|sample2_data|primer2.fa
 
 The line prefixed with a ‘#’ isn’t necessary and will be skipped automatically by the pipeline.
 
