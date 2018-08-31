@@ -1,11 +1,11 @@
-**Table of Contents**
+#**Table of Contents**
 
     I. Introduction
     II. Prerequisites
     III. Tutorial
     IV. Getting help
 
-**I. Introduction**
+#**I. Introduction**
 
     This is a bash-based pipeline for analysis of PacBio Iso-Seq generated with RSII or Sequel. Collectively, the pipeline will do:
     
@@ -21,7 +21,7 @@
     J. APE characterization, like motif of splicing site, classifying APE into annotated or novel events, etc.
     K. Combination pattern of APE.
 
-**II. Prerequisites**
+#**II. Prerequisites**
 
    The given version is just to suggest you to use this version, but not to prohibit you from using newer version, although we haven’t tested the newer ones and some unknown error may occur.
    
@@ -29,9 +29,9 @@
    
    The needed in-house scripts (fqNameMapping.pl, fqSeFilter.pl, etc.) are packaged in the source release.
 
-**III. Tutorial**
+#**III. Tutorial**
 
-**3.1 Setup Environment**
+##**3.1 Setup Environment**
 
 Assume that the pipeline is put at ~/bin/isoSeq.
 
