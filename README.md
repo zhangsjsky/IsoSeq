@@ -1,12 +1,10 @@
-**Table of Contents**
-=
+# Table of Contents
     I. Introduction
     II. Prerequisites
     III. Tutorial
     IV. Getting help
 
-**I. Introduction**
-==
+## I. Introduction
     This is a bash-based pipeline for analysis of PacBio Iso-Seq generated with RSII or Sequel. Collectively, the pipeline will do:
     
     A. For RSII, extract raw reads, subreads and CCS reads from raw data in h5; For Sequel, only extract the CCS reads.
