@@ -36,6 +36,7 @@ seqtk|1.2-r94|The toolkit to manipulate fastq/fasta files.
 GMAP|2017-11-15|The mapper for aligning CCS reads onto reference genome
 SAMTools|1.5|The toolkit to manipulate BAM files.
 BEDTools|2-2.26.0|The utilities to manipulate BED files.
+   
    The given version is just to suggest you to use this version, but not to prohibit you from using newer version, although we haven’t tested the newer ones and some unknown error may occur.
    
    Needed R packages: ggplot2, EMT, etc.
