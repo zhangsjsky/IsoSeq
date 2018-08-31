@@ -89,7 +89,7 @@ GTACTCTGCGTTGATACCACTGCTT<br>
 &gt;F1<br>
 TCGTCGGGGACAACTTTGTACAAAAAAGTTGGATGGGG<br>
 &gt;R1<br>
-CCCAACTTTCTTGTACAAAGTTGTCCCC<br>
+CCCAACTTTCTTGTACAAAGTTGTCCCC
 Junction (Optional)|If the corresponding RNA-seq junction information is available for the sample, this information in .bed format (output of RNA-seq mapping, like TopHat) can be provided. If so, the following extra analysis will be done:<br>
 1.	Remove mis-aligned exon guiding by RNA-seq junction<br>
 2.	Fill missing exon guiding by RNA-seq junction<br>
