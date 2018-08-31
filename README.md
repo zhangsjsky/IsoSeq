@@ -5,7 +5,7 @@
     III. Tutorial
     IV. Getting help
 
-I. Introduction
+**I. Introduction**
 
     This is a bash-based pipeline for analysis of PacBio Iso-Seq generated with RSII or Sequel. Collectively, the pipeline will do:
     
@@ -21,7 +21,7 @@ I. Introduction
     J. APE characterization, like motif of splicing site, classifying APE into annotated or novel events, etc.
     K. Combination pattern of APE.
 
-II. Prerequisites
+**II. Prerequisites**
 
    The given version is just to suggest you to use this version, but not to prohibit you from using newer version, although we haven’t tested the newer ones and some unknown error may occur.
    
@@ -29,9 +29,9 @@ II. Prerequisites
    
    The needed in-house scripts (fqNameMapping.pl, fqSeFilter.pl, etc.) are packaged in the source release.
 
-III. Tutorial
+**III. Tutorial**
 
-3.1 Setup Environment
+**3.1 Setup Environment**
 
 Assume that the pipeline is put at ~/bin/isoSeq.
 
@@ -59,7 +59,7 @@ If pipeline hele message is shown, the environment is ready, otherwise if the be
 
 check whether the pipeline scripts are executable and their path is in the $PATH variable.
 
-3.2 Prepare Configuration File
+**3.2 Prepare Configuration File**
 
 The format and description of the configuration file is explained in the help message of isoSeq.sh. It (e.g. sample.conf) is a text file with many lines, each of which is TSV (tab-separated value) or space-separated values. One line is the complete information for one sample. Columns in one line is:
 
@@ -75,7 +75,7 @@ sample2       sample2_data   primer2.fa
 
 The line prefixed with a ‘#’ isn’t necessary and will be skipped automatically by the pipeline.
 
-3.3 Prepare Resource Data
+**3.3 Prepare Resource Data**
 
 Some resource (data) can be specified in env.conf file in the source. Needed resource files include:
 
@@ -96,7 +96,7 @@ These variables can be overwrote by command option of isoSeq.sh, for example:
     isoSeq.sh --genomeSeq /path/to/your/genome/sequence
 will overwrite the “$resource/fna/hg19/all.fa”.
 
-3.4 Start to Run the Pipeline
+**3.4 Start to Run the Pipeline**
 
 A complete command to run the pipeline may be:
 
@@ -119,6 +119,6 @@ If the variables in env.conf are specified correctly, you can simply run the ana
 
     isoSeq.sh --thread 10 sample.conf >isoSeq.log 2>isoSeq.err
 
-IV. Getting help
+**IV. Getting help**
 
 You can send the author (zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
