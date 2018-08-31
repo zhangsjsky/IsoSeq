@@ -99,7 +99,7 @@ will overwrite the “$resource/fna/hg19/all.fa”.
 **3.4 Start to Run the Pipeline**
 ===
 A complete command to run the pipeline may be:
-````
+```` bash
 isoSeq.sh --gmapDir gmapDir/hg19 \
     --gmapDB hg19 \
     --genomeSeq hg19.fasta \
