@@ -36,27 +36,27 @@
 Assume that the pipeline is put at ~/bin/isoSeq.
 
 This pipeline is composed of perl, python, bash and R scripts as well as pre-compiled C binaries, so no need to build/compile them. The only thing needed to do is making them executable:
-```
+``` bash
 cd ~/bin/isoSeq
 chmod u+x *.{pl,py,sh,R} skyjoin faFilter faCount
 ```
 Add the path of the pipeline as the prefix of the environment variable $PATH, so that all scripts can be runed as executable command directly.
-
-    PATH=~/bin/isoSeq:$PATH
-
+``` bash
+PATH=~/bin/isoSeq:$PATH
+```
 After doing this, the correct $PATH may look like:
 ````
 echo $PATH
 ~/bin/isoSeq:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 ````
 Test whether the pipeline is accessible:
-
-    isoSeq.sh
-    
+```` bash
+isoSeq.sh
+````
 If pipeline hele message is shown, the environment is ready, otherwise if the below error is shown:
-
-    bash: isoSeq.sh: command not found...
-
+```` bash
+bash: isoSeq.sh: command not found...
+````
 check whether the pipeline scripts are executable and their path is in the $PATH variable.
 
 **3.2 Prepare Configuration File**
@@ -92,8 +92,9 @@ hg19RefGeneGpe is GPE (Gene Prediction Extension) file describing gene model. It
 gapHg19 is a BED file describing genome gap. It can be downloaded from UCSC (http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/gap.txt.gz).
 
 These variables can be overwrote by command option of isoSeq.sh, for example:
-
-    isoSeq.sh --genomeSeq /path/to/your/genome/sequence
+```` bash
+isoSeq.sh --genomeSeq /path/to/your/genome/sequence
+````
 will overwrite the “$resource/fna/hg19/all.fa”.
 
 **3.4 Start to Run the Pipeline**
@@ -113,12 +114,13 @@ isoSeq.sh --gmapDir gmapDir/hg19 \
     >isoSeq.log 2>isoSeq.err
 ````
 GMAP DB can be prepared by:
-
-    gmap_build --db=hg19 --circular=chrM hg19.fasta
+```` bash
+gmap_build --db=hg19 --circular=chrM hg19.fasta
+````
 If the variables in env.conf are specified correctly, you can simply run the analysis as:
-
-    isoSeq.sh --thread 10 sample.conf >isoSeq.log 2>isoSeq.err
-
+```` bash
+isoSeq.sh --thread 10 sample.conf >isoSeq.log 2>isoSeq.err
+````
 **IV. Getting help**
 ==
 You can send the author [zhangsjsky@foxmail.com](zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
