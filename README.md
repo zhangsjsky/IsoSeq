@@ -1,4 +1,4 @@
-<p align="center">**Table of Contents**</p>
+**Table of Contents**
 =
     I. Introduction
     II. Prerequisites
