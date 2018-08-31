@@ -19,8 +19,7 @@
     J. APE characterization, like motif of splicing site, classifying APE into annotated or novel events, etc.
     K. Combination pattern of APE.
 
-**II. Prerequisites**
-==
+## II. Prerequisites
 |Tool Name|Version|Description|
 |:---|:---|:---|
 SMRT Analysis|v2.3.0|The analysis toolkit for RSII Iso-seq data.
@@ -41,10 +40,8 @@ BEDTools|2-2.26.0|The utilities to manipulate BED files.
    
    The needed in-house scripts (fqNameMapping.pl, fqSeFilter.pl, etc.) are packaged in the source release.
 
-**III. Tutorial**
-==
-**3.1 Setup Environment**
-===
+## III. Tutorial
+### 3.1 Setup Environment
 Assume that the pipeline is put at ~/bin/isoSeq.
 
 This pipeline is composed of perl, python, bash and R scripts as well as pre-compiled C binaries, so no need to build/compile them. The only thing needed to do is making them executable:
@@ -71,8 +68,7 @@ bash: isoSeq.sh: command not found...
 ````
 check whether the pipeline scripts are executable and their path is in the $PATH variable.
 
-**3.2 Prepare Configuration File**
-===
+### 3.2 Prepare Configuration File
 The format and description of the configuration file is explained in the help message of isoSeq.sh. It (e.g. sample.conf) is a text file with many lines, each of which is TSV (tab-separated value) or space-separated values. One line is the complete information for one sample. Columns in one line is:
 
 |Column|Description
@@ -91,8 +87,7 @@ An example of configuration file:
 
 The line prefixed with a ‘#’ isn’t necessary and will be skipped automatically by the pipeline.
 
-**3.3 Prepare Resource Data**
-===
+### 3.3 Prepare Resource Data
 Some resource (data) can be specified in env.conf file in the source. Needed resource files include:
 
 |Variable|Default Value|
@@ -123,8 +118,7 @@ isoSeq.sh --genomeSeq /path/to/your/genome/sequence
 ````
 will overwrite the “$resource/fna/hg19/all.fa”.
 
-**3.4 Start to Run the Pipeline**
-===
+### 3.4 Start to Run the Pipeline
 A complete command to run the pipeline may be:
 ```` bash
 isoSeq.sh --gmapDir gmapDir/hg19 \
@@ -147,6 +141,5 @@ If the variables in env.conf are specified correctly, you can simply run the ana
 ```` bash
 isoSeq.sh --thread 10 sample.conf >isoSeq.log 2>isoSeq.err
 ````
-**IV. Getting help**
-==
+## IV. Getting help
 You can send the author [zhangsjsky@foxmail.com](mailto:zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
