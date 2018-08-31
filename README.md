@@ -36,19 +36,19 @@
 Assume that the pipeline is put at ~/bin/isoSeq.
 
 This pipeline is composed of perl, python, bash and R scripts as well as pre-compiled C binaries, so no need to build/compile them. The only thing needed to do is making them executable:
-
-    cd ~/bin/isoSeq
-    chmod u+x *.{pl,py,sh,R} skyjoin faFilter faCount
-    
+```
+cd ~/bin/isoSeq
+chmod u+x *.{pl,py,sh,R} skyjoin faFilter faCount
+```
 Add the path of the pipeline as the prefix of the environment variable $PATH, so that all scripts can be runed as executable command directly.
 
     PATH=~/bin/isoSeq:$PATH
 
 After doing this, the correct $PATH may look like:
-
-    echo $PATH
-    ~/bin/isoSeq:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-    
+````
+echo $PATH
+~/bin/isoSeq:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+````
 Test whether the pipeline is accessible:
 
     isoSeq.sh
@@ -99,19 +99,19 @@ will overwrite the “$resource/fna/hg19/all.fa”.
 **3.4 Start to Run the Pipeline**
 ===
 A complete command to run the pipeline may be:
-
-    isoSeq.sh --gmapDir gmapDir/hg19 \
-        --gmapDB hg19 \
-        --genomeSeq hg19.fasta \
-        --gpe hg19.refGene.gpe \
-        --gap hg19.gap.bed \
-        --twoBit hg19.2bit \
-        --chrSize hg19.sizes \
-        --outDir . \
-        --thread 10 \
-        sample.conf \
-        >isoSeq.log 2>isoSeq.err
-
+````
+isoSeq.sh --gmapDir gmapDir/hg19 \
+    --gmapDB hg19 \
+    --genomeSeq hg19.fasta \
+    --gpe hg19.refGene.gpe \
+    --gap hg19.gap.bed \
+    --twoBit hg19.2bit \
+    --chrSize hg19.sizes \
+    --outDir . \
+    --thread 10 \
+    sample.conf \
+    >isoSeq.log 2>isoSeq.err
+````
 GMAP DB can be prepared by:
 
     gmap_build --db=hg19 --circular=chrM hg19.fasta
@@ -121,4 +121,4 @@ If the variables in env.conf are specified correctly, you can simply run the ana
 
 **IV. Getting help**
 ==
-You can send the author (zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
+You can send the author [zhangsjsky@foxmail.com](zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
