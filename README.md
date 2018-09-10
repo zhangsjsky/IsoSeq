@@ -1,11 +1,13 @@
 # Table of Contents
 
-```
-I. Introduction
-II. Prerequisites
-III. Tutorial
-IV. Getting help
-```
+> I. Introduction
+> II. Prerequisites
+> III. Tutorial
+> 3.1 Setup Environment
+> 3.2 Prepare Configuration File
+> 3.3 Prepare Resource Data
+> 3.4 Start to Run the Pipeline
+> IV. Get help
 
 ## I. Introduction
 
@@ -179,6 +181,6 @@ If the variables in env.conf are specified correctly, you can simply run the ana
 isoSeq.sh --thread 10 sample.conf >isoSeq.log 2>isoSeq.err
 ```
 
-## IV. Getting help
+## IV. Get help
 
 You can send the author [zhangsjsky@foxmail.com](mailto:zhangsjsky@foxmail.com) any information about this analysis pipeline, like bug reporting, performance improvement suggestion.
