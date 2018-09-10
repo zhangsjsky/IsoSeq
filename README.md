@@ -1,12 +1,19 @@
 # Table of Contents
 
 > I. Introduction
+>
 > II. Prerequisites
+>
 > III. Tutorial
+>
 > 3.1 Setup Environment
+>
 > 3.2 Prepare Configuration File
+>
 > 3.3 Prepare Resource Data
+>
 > 3.4 Start to Run the Pipeline
+>
 > IV. Get help
 
 ## I. Introduction
